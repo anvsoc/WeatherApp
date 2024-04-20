@@ -108,7 +108,7 @@
                 const response3 = await fetch(testurl);
                 data3 = await response3.json();
                 cityname1 = data3.name  
-                checkCurrentWeather(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityname1}?unitGroup=us&key=3HHCRHCXVZ6HBJR7URWDPP5AV&contentType=json`)
+                checkCurrentWeather(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityname1}?unitGroup=us&key=6MEHP3584ZT3JXWXNGRDWDC8T&contentType=json`)
             });
 });
 
@@ -382,7 +382,7 @@
         weatherSymbolMini.src = weatherSymbol.src
         
         // Forecast Weather
-        const response4 = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${data.resolvedAddress.split(", ")[0]},${data.resolvedAddress.split(", ")[1]}?key=3HHCRHCXVZ6HBJR7URWDPP5AV`)
+        const response4 = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${data.resolvedAddress.split(", ")[0]},${data.resolvedAddress.split(", ")[1]}?key=6MEHP3584ZT3JXWXNGRDWDC8T`)
         data4 = await response4.json()
 
         for(var i=1; i<7; i++){
@@ -415,7 +415,7 @@
 
     searchIconButton.onclick = async function(){
         notificationsound()
-        await checkCurrentWeather(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput.value}?unitGroup=us&key=3HHCRHCXVZ6HBJR7URWDPP5AV&contentType=json`)
+        await checkCurrentWeather(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput.value}?unitGroup=us&key=6MEHP3584ZT3JXWXNGRDWDC8T&contentType=json`)
         if (desc2 == "Rain") {
             rainsound()
         }
@@ -435,7 +435,7 @@
 
     searchInput.addEventListener("keypress", async function(){
         if (event.key === "Enter") {
-            await checkCurrentWeather(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput.value}?unitGroup=us&key=3HHCRHCXVZ6HBJR7URWDPP5AV&contentType=json`)
+            await checkCurrentWeather(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput.value}?unitGroup=us&key=6MEHP3584ZT3JXWXNGRDWDC8T&contentType=json`)
         }
 
         if (desc2 == "Rain") {
